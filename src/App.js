@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import FormValidation from './FormValidation';
+// import FormValidation from './FormValidation';
+import ShoppingList from './ShoppingList';
+import "./ShoppingList.css";
 
 // import InputEvents from './events/InputEvents'
 // import MovementEvents from './events/MovementEvents'
@@ -9,9 +11,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FormValidation />
+        {/* <FormValidation /> */}
         {/* <InputEvents />
         <MovementEvents /> */}
+        <ShoppingList />
       </div>
     );
   }
