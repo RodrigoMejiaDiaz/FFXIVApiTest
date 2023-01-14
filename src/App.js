@@ -1,16 +1,18 @@
-import './App.css';
+import React, { Component } from 'react';
 
-import Card from './Card.js'
-import './Card.css';
+import InputEvents from './events/InputEvents'
+import MovementEvents from './events/MovementEvents'
+import './events/Events.css'
 
-function App() {
-  return (
-    <div className="App">
-      <Card />
-      <Card />
-      <Card />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <InputEvents />
+        <MovementEvents />
+      </div>
+    );
+  }
 }
 
 export default App;
