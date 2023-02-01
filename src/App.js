@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Link, Route, Router, Routes } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
+// import Home from "./components/Home";
+// import About from "./components/About";
+// import Contact from "./components/Contact";
 
 // import FormValidation from './FormValidation';
 // import ShoppingList from './ShoppingList';
@@ -14,38 +14,54 @@ import Contact from './components/Contact';
 // import MovementEvents from './events/MovementEvents'
 // import './events/Events.css'
 
+import Item from "./api/Item";
+import Nav from "./api/Nav";
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <FormValidation /> */}
-        {/* <InputEvents />
+        <>
+          {/* <FormValidation /> */}
+          {/* <InputEvents />
         <MovementEvents /> */}
-        {/* <ShoppingList /> */}
-        <h1>HW</h1>
-        <ul>
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"/about"}>About</Link>
-          </li>
-          <li>
-            <Link to={"/about/123"}>About John</Link>
-          </li>
-          <li>
-            <Link to={"/contact"}>Contact</Link>
-          </li>
-        </ul>
-        <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/about' element={<About />}/>
-          <Route path='/about/:userId' element={<About />}/>
-          <Route path='/contact' element={<Contact />}/>
-          <Route path='*' element={
-            <h2>Error! try again.</h2>
-          }/>
-        </Routes>
+          {/* <ShoppingList /> */}
+        </>
+        <>
+          {/* 
+          <h1>HW</h1>
+          <ul>
+            <li>
+              <Link to={"/"}>Home</Link>
+            </li>
+            <li>
+              <Link to={"/about"}>About</Link>
+            </li>
+            <li>
+              <Link to={"/about/123"}>About John</Link>
+            </li>
+            <li>
+              <Link to={"/contact"}>Contact</Link>
+            </li>
+          </ul>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/about/:userId" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+         */}
+        </>
+        <>
+          <h1>FFXIV API</h1>
+          <hr />
+          <Nav />
+          <hr />
+          <Routes>
+            <Route path="/items/:itemId" element={<Item />} />
+          </Routes>
+        </>
       </div>
     );
   }
