@@ -54,7 +54,7 @@ class App extends Component {
          */}
         </>
         <>
-          <h1>FFXIV API</h1>
+          <h1>FFXIV ITEMS API</h1>
           <hr />
           <Nav />
           <hr />
